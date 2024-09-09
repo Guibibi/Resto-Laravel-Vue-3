@@ -12,7 +12,6 @@ return new class () extends Migration {
     {
         Schema::create('restaurants', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('name');
             $table->string('food-type');
             $table->decimal('rating', 2, 1)->nullable();
