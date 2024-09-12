@@ -64,7 +64,7 @@ defineProps<{
                             <h2 class="mt-6 text-3xl font-semibold text-gray-900 dark:text-white">Welcome to my Laravel Playground</h2>
 
                             <p class="mt-6 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                This is a small playground to test out Laravel withBreeze and a Vue 3 Frontend. You are free to register an account and play around with the Restaurants.
+                                This is a small playground to test out Laravel with Breeze and a Vue 3 Frontend. You are free to register an account and play around with the Restaurants.
                             </p>
                             <button class="mt-4 px-4 py-2 font-semibold text-white rounded-md shadow-sm bg-gradient-to-br from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">Access Restaurants</button>
                         </div>
