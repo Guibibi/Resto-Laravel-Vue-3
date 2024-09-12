@@ -1,17 +1,11 @@
 <script setup>
 import { Link } from "@inertiajs/vue3";
-import Restaurant from '@/types/Restaurant'
+import { usePage } from "@inertiajs/vue3";
 
-defineProps({
-    restaurants: Restaurant[],
-});
+const page = usePage()
 </script>
 
 <template>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Restaurants
-            </h2>
-
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div
@@ -56,7 +50,7 @@ defineProps({
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
                             <tr
-                                v-for="restaurant in restaurants"
+                                v-for="restaurant in page.props.restaurants"
                                 :key="restaurant.id"
                             >
                                 <td class="px-6 py-4 whitespace-nowrap">
