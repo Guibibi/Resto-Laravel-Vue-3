@@ -13,7 +13,8 @@ return new class () extends Migration {
         Schema::create('restaurants', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('food-type');
+            $table->string('food_type');
+            $table->string('location');
             $table->decimal('rating', 2, 1)->nullable();
             $table->text('description');
             $table->timestamps();

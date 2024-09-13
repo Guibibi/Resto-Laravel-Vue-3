@@ -48,7 +48,7 @@ class RestaurantController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $restaurant = Restaurant::findOrFail($id);
         return Inertia::render('Restaurants/Show', ['restaurant' => $restaurant]);
     }
 
@@ -57,6 +57,7 @@ class RestaurantController extends Controller
      */
     public function edit(string $id)
     {
+        $restaurant = Restaurant::findOrFail($id);
         return Inertia::render('Restaurants/Edit', ['restaurant' => $restaurant]);
     }
 
@@ -65,6 +66,7 @@ class RestaurantController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $restaurant = Restaurant::findOrFail($id);
         $validated = $request->validate([
             'name' => 'required|max:255',
             'food_type' => 'required|max:255',
@@ -83,7 +85,7 @@ class RestaurantController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $restaurant = Restaurant::findOrFail($id);
         $restaurant->delete();
 
         return redirect()->route('restaurants.index')->with('message', 'Restaurant deleted successfully.');
