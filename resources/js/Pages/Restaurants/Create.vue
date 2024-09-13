@@ -4,6 +4,7 @@ import Button from '@/Components/Button.vue';
 import TextInput from '@/Components/TextInput.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import InputError from '@/Components/InputError.vue';
+import BackArrow from '@/Components/BackArrow.vue';
 
 const form = useForm({
     name: '',
@@ -24,6 +25,10 @@ const submit = () => {
         }
     });
 };
+
+const goBack = () => {
+    router.visit(route('restaurants.index'))
+};
 </script>
 
 <template>
@@ -32,6 +37,12 @@ const submit = () => {
             <div
                     class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6"
                 >
+                <button 
+            @click="goBack" 
+            class="absolute top-4 left-4 p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition-colors duration-200"
+          >
+            <BackArrow size="24" color="#4B5563" />
+          </button>
                 <h2 class="text-2xl font-semibold mb-6">Create New Restaurant</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
