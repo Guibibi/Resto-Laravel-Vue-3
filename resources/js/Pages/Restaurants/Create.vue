@@ -15,7 +15,6 @@ const form = useForm({
 });
 
 const submit = () => {
-    console.log('hello^')
     form.post(route('restaurants.store'), {
         onSuccess: () => {
             router.visit(route('restaurants.index'));
